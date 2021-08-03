@@ -34,9 +34,21 @@ function isPalindrome(word) {
    }
 }
 
+function addUpTo(array, index) {
+    if (index == 0){
+        return array[0]
+    } else {
+        return addUpTo(array.slice(0, index), index - 1) + array[index]
+    }
+}
+
+
+
 // printString('nasrin')
 
 // console.log(reverseString('nasrin'))
 
-console.log(isPalindrome('ababa'))
+// console.log(isPalindrome('ababa'))
+
+console.log(addUpTo([4, 3, 1, 5], 0))
 
